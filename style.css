@@ -1,0 +1,368 @@
+/* =========================
+   RESET
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* =========================
+   PAGE
+========================= */
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+
+    background:
+        radial-gradient(circle at 20% 10%, #4b1248, transparent 35%),
+        radial-gradient(circle at 80% 90%, #24104f, transparent 35%),
+        #050505;
+
+    color: #ffffff;
+
+    min-height: 100vh;
+
+    padding: 30px 16px;
+}
+
+/* =========================
+   CONTENEUR
+========================= */
+
+.container {
+    width: 100%;
+    max-width: 520px;
+
+    margin: auto;
+}
+
+
+/* =========================
+   PROFIL
+========================= */
+
+.profile {
+    text-align: center;
+
+    margin-bottom: 28px;
+}
+
+
+.avatar {
+    width: 90px;
+    height: 90px;
+    margin: 0 auto 15px;
+
+    border-radius: 50%;
+    overflow: hidden;
+
+    border: 2px solid #ffffff;
+
+    box-shadow: 0 8px 30px rgba(255, 255, 255, 0.15);
+}
+
+.avatar img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    display: block;
+}
+
+.profile h1 {
+    font-size: 27px;
+
+    margin-bottom: 7px;
+}
+
+
+.subtitle {
+    color: #aaaaaa;
+
+    font-size: 15px;
+}
+
+
+/* =========================
+   INTRODUCTION
+========================= */
+
+.intro {
+    text-align: center;
+
+    margin-bottom: 20px;
+}
+
+
+.intro p {
+    color: #d2d2d2;
+
+    font-size: 15px;
+
+    line-height: 1.6;
+
+    margin-bottom: 13px;
+}
+
+
+.intro strong {
+    color: #ffffff;
+}
+
+
+.question {
+    margin-top: 12px;
+}
+
+
+/* =========================
+   FLÈCHE
+========================= */
+
+.arrow {
+    text-align: center;
+
+    font-size: 25px;
+
+    margin: 10px 0 15px;
+}
+
+
+/* =========================
+   BOUTONS
+========================= */
+
+.button,
+.menu {
+    width: 100%;
+
+    margin-bottom: 14px;
+}
+
+
+/* BUSINESS */
+
+.button.business {
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    padding: 17px;
+
+    border-radius: 16px;
+
+    background: #ffffff;
+
+    color: #111111;
+
+    text-decoration: none;
+
+    box-shadow: 0 8px 25px rgba(0,0,0,0.35);
+
+    transition: transform 0.2s ease,
+                box-shadow 0.2s ease;
+}
+
+
+.button.business:hover {
+    transform: translateY(-2px);
+
+    box-shadow: 0 12px 30px rgba(0,0,0,0.5);
+}
+
+
+.button.business > span {
+    font-size: 25px;
+}
+
+
+.button.business strong,
+.button.business small {
+    display: block;
+}
+
+
+.button.business small {
+    margin-top: 4px;
+
+    color: #666666;
+
+    font-size: 12px;
+}
+
+
+/* =========================
+   MENUS
+========================= */
+
+.menu {
+    border-radius: 16px;
+
+    overflow: hidden;
+
+    background: #151515;
+
+    border: 1px solid #292929;
+}
+
+
+/* BOUTON MENU */
+
+.menu summary {
+    list-style: none;
+
+    cursor: pointer;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 14px;
+
+    padding: 17px;
+
+    user-select: none;
+}
+
+
+/* Retire la petite flèche native */
+
+.menu summary::-webkit-details-marker {
+    display: none;
+}
+
+
+.icon {
+    font-size: 24px;
+}
+
+
+/* TEXTE */
+
+.button-text {
+    flex: 1;
+
+    text-align: left;
+}
+
+
+.button-text strong,
+.button-text small {
+    display: block;
+}
+
+
+.button-text strong {
+    font-size: 15px;
+}
+
+
+.button-text small {
+    color: #888888;
+
+    font-size: 12px;
+
+    margin-top: 4px;
+}
+
+
+/* FLÈCHE */
+
+.arrow-right {
+    font-size: 28px;
+
+    color: #888888;
+
+    transition: transform 0.2s ease;
+}
+
+
+.menu[open] .arrow-right {
+    transform: rotate(90deg);
+}
+
+
+/* =========================
+   SOUS-MENU
+========================= */
+
+.submenu {
+    padding: 0 12px 12px;
+}
+
+
+.submenu a {
+    display: block;
+
+    padding: 13px 15px;
+
+    margin-top: 7px;
+
+    border-radius: 11px;
+
+    background: #222222;
+
+    color: #ffffff;
+
+    text-decoration: none;
+
+    font-size: 14px;
+
+    transition: background 0.2s ease;
+}
+
+
+.submenu a:hover {
+    background: #303030;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    text-align: center;
+
+    color: #666666;
+
+    font-size: 12px;
+
+    margin-top: 30px;
+
+    padding-bottom: 15px;
+}
+
+
+/* =========================
+   PETITS ÉCRANS
+========================= */
+
+@media (max-width: 380px) {
+
+    body {
+        padding: 25px 12px;
+    }
+
+
+    .profile h1 {
+        font-size: 24px;
+    }
+
+
+    .intro p {
+        font-size: 14px;
+    }
+
+
+    .menu summary,
+    .button.business {
+        padding: 15px;
+    }
+
+}
